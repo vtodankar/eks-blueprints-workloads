@@ -39,13 +39,6 @@ spec:
       securityContext: {}
       shareProcessNamespace: false
       terminationGracePeriodSeconds: 30
-      nodeSelector:
-        team: default
-        type: karpenter
-      tolerations:
-        - key: 'karpenter'
-          operator: 'Exists'
-          effect: 'NoSchedule'
       topologySpreadConstraints:
         - maxSkew: 1
           topologyKey: topology.kubernetes.io/zone
